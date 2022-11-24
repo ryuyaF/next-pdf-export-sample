@@ -20,7 +20,7 @@ export default function ReactPdfSample() {
 
 
   const handleClick = () => {
-    const blob = pdf(Doc)
+    // const blob = pdf(Doc)
     console.log('ok')
   }
 
