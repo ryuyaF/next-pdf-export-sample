@@ -1,4 +1,5 @@
 import { Page, Text, Document, PDFViewer, StyleSheet, Font } from '@react-pdf/renderer';
+import { useEffect, useState } from 'react';
 
 Font.register({
   family: 'Nasu-Regular',
@@ -8,8 +9,6 @@ Font.register({
 // Create styles
 const styles = StyleSheet.create({
   viewer: {
-    // width: window.innerWidth,
-    // height: window.innerHeight,
     width: '100vw',
     height: '100vh',
   },
@@ -93,6 +92,11 @@ const Content = () => (
 )
 
 const Sample = ({ isPreview = false }) => {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => setIsClient(true), [])
+
+  if (!isClient) return <></>
 
   if (isPreview) return (
     <PDFViewer

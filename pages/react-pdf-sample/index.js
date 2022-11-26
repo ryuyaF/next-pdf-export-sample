@@ -1,20 +1,20 @@
 import React from 'react';
-import dynamic from "next/dynamic";
 import Link from 'next/link';
+import Download from '../Components/ReactPdf/download';
+import DownloadToBlob from '../Components/ReactPdf/download-to-blob'
+import DownloadUsePdf from '../Components/ReactPdf/download-use-pdf'
+import Sample from '../Components/ReactPdf/sample';
 
 export default function ReactPdfSample() {
-  const Sample = dynamic(() => import("../Components/ReactPdf/sample"), {
-    ssr: false,
-  })
-  const Download = dynamic(() => import('../Components/ReactPdf/download'), {
-    ssr: false,
-  })
-  const DownloadToBlob = dynamic(() => import('../Components/ReactPdf/download-to-blob'), {
-    ssr: false,
-  })
-  const DownloadUsePdf = dynamic(() => import('../Components/ReactPdf/download-use-pdf'), {
-    ssr: false,
-  })
+  // const Sample = dynamic(() => import("../Components/ReactPdf/sample"), {
+  //   ssr: false,
+  // })
+  // const DownloadToBlob = dynamic(() => import('../Components/ReactPdf/download-to-blob'), {
+  //   ssr: false,
+  // })
+  // const DownloadUsePdf = dynamic(() => import('../Components/ReactPdf/download-use-pdf'), {
+  //   ssr: false,
+  // })
 
   return <>
     <div>

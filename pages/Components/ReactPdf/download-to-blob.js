@@ -26,7 +26,6 @@ export default function DownloadToBlob() {
       const url = URL.createObjectURL(blob)
       window.open(url)
     })
-    window.open(url)
   }
 
   return <>
