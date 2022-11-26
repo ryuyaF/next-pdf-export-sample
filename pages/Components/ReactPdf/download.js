@@ -1,8 +1,12 @@
-import React, {  useState } from 'react';
-import { PDFDownloadLink } from '@react-pdf/renderer';
+import React from 'react';
 import Sample from './sample'
+import dynamic from 'next/dynamic';
 
 export default function Download() {
+
+  const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then(mod => mod.PDFDownloadLink), {
+    ssr: false,
+  })
 
   return <>
     <div>

@@ -1,4 +1,4 @@
-import { Page, Text, Document, PDFViewer, StyleSheet, Font, Note } from '@react-pdf/renderer';
+import { Page, Text, Document, PDFViewer, StyleSheet, Font } from '@react-pdf/renderer';
 
 Font.register({
   family: 'Nasu-Regular',
@@ -8,8 +8,10 @@ Font.register({
 // Create styles
 const styles = StyleSheet.create({
   viewer: {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    // width: window.innerWidth,
+    // height: window.innerHeight,
+    width: '100vw',
+    height: '100vh',
   },
   document: {
     fontFamily: 'Nasu-Regular'

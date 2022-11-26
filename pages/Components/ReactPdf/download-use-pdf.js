@@ -4,6 +4,8 @@ import Sample from './sample'
 
 
 export default function DownloadUsePdf() {
+  if(!window) return <></>
+
   const [instance, updateInstance] = usePDF({ document: (<Sample />) })
 
   if(instance.error) return <div>Something went wrong: {instance.error}</div>

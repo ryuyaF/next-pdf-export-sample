@@ -1,15 +1,11 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import dynamic from "next/dynamic";
-import { pdf, PDFDownloadLink, usePDF } from '@react-pdf/renderer';
 import Link from 'next/link';
 
 export default function ReactPdfSample() {
   const Sample = dynamic(() => import("../Components/ReactPdf/sample"), {
     ssr: false,
-  });
-  const BlobProvider = dynamic(() => import('@react-pdf/renderer'), {
-    ssr: false,
-  });
+  })
   const Download = dynamic(() => import('../Components/ReactPdf/download'), {
     ssr: false,
   })
