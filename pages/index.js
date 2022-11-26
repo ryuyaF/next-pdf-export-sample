@@ -16,7 +16,7 @@ export default function Home() {
           Next.jsでPDF出力させるサンプルアプリ
         </h1>
         <Link href="/react-pdf-sample">
-          <h2>👉<span style={{color: 'blue'}}>React PDFのSample</span></h2>
+          <h2>👉<span style={{color: 'blue', cursor: 'pointer'}}>React PDFのSample</span></h2>
         </Link>
       </main>
     </div>
