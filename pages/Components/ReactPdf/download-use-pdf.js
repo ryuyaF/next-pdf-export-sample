@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePDF } from '@react-pdf/renderer';
 import Sample from './sample'
 
-
-export default function DownloadUsePdf() {
-  if(!window) return <></>
-
+const UsePdf = () => {
   const [instance, updateInstance] = usePDF({ document: (<Sample />) })
 
   if(instance.error) return <div>Something went wrong: {instance.error}</div>
@@ -32,4 +29,14 @@ export default function DownloadUsePdf() {
       </div>
     </div>
   </>
+}
+
+export default function DownloadUsePdf() {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => setIsClient(true), [])
+
+  if(!isClient) return <></>
+
+  return <UsePdf />
 }
